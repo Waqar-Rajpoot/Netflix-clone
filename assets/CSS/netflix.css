@@ -126,7 +126,6 @@
     
   }
   .row__poster:hover{
-    transform: scale(1.2);
     opacity: 0.2;
   }
   .row__posterLarge, 
@@ -140,11 +139,133 @@
     transition: transform 500ms;
   
   }
-  div1:hover,
   .row__posterLarge:hover,
   .row__posterLarge1:hover,
   .row__posterLarge2:hover{
-    transform: scale(1.2);
     opacity: 0.2;
   
   }
+
+  .content{
+    position: relative;
+    margin-right: 22px;
+  }
+  .content:hover .row__poster{
+    transform: scale(1.2);
+    opacity: 0.3;
+  }
+
+  .content:hover .heading,
+  .content:hover .description,
+  .content:hover .date{
+    opacity: 1;
+  }
+
+  .row__poster{
+    transform: all 1s ease-in-out;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 30px;    
+  }
+  .heading{
+    background-color: #333;
+    padding: 0 10px;
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+  p.description{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 230px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+  p.date{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+  }
+
+
+
+  /*====================================  Footer  =============================*/
+
+footer {
+  display: flex;
+  border-top: 1px solid #333;
+  background-color: #333;
+}
+.footerLeft {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+}
+.fMenuTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: aliceblue;
+  margin-bottom: 20px;
+}
+.fList {
+  padding: 0;
+  list-style: none;
+}
+.fListItem {
+  margin-bottom: 10px;
+  color: gray;
+  cursor: pointer;
+}
+
+.footerRight {
+  flex: 1;
+  color: beige;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fInput {
+  padding: 5px;
+}
+.fButton {
+  padding: 5px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.fIcons {
+  display: flex;
+  color: white;
+}
+.fIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.fIcon:hover{
+  cursor: pointer;
+}
+.copyright {
+  font-weight: 300;
+  font-size: 14px;
+}
